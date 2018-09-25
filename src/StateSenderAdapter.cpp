@@ -10,6 +10,7 @@ StateSenderAdapter::StateSenderAdapter(){
 };
 
 void StateSenderAdapter::createSocket(vss::ExecutionConfig &exeConfig) {
+    std::count<<exeConfig.stateSendAddr<<std::endl;
     if(exeConfig.stateSendAddr.getIp() != vss::DEFAULT_STATE_SEND_ADDR || exeConfig.stateSendAddr.getPort() != vss::DEFAULT_STATE_PORT)
         sender->createSocket(exeConfig.stateSendAddr);
     else
